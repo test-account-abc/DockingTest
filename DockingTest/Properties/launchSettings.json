@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DockingTest (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "DockingTest (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

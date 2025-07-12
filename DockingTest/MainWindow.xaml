@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    xmlns:dock="using:WinUI.Dock"
+    x:Class="DockingTest.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DockingTest"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Title="DockingTest">
+    <Grid>
+        <dock:DockManager ParentWindow="{Binding ElementName=Main}">
+            <dock:LayoutPanel Orientation="Vertical">
+                <dock:LayoutPanel DockHeight="2" Orientation="Horizontal">
+                    <!-- 左上のパネル -->
+                    <dock:DocumentGroup DockWidth="4">
+                        <dock:Document Title="エディタ">
+                            <Grid Background="Red" />
+                        </dock:Document>
+                    </dock:DocumentGroup>
+
+                    <dock:DocumentGroup DockWidth="1">
+                        <dock:Document Title="エクスプローラー">
+                            <Grid Background="Blue" />
+                        </dock:Document>
+                    </dock:DocumentGroup>
+                </dock:LayoutPanel>
+                <dock:LayoutPanel DockHeight="1" Orientation="Horizontal">
+                    <dock:DocumentGroup TabPosition="Bottom">
+                        <dock:Document Title="ターミナル">
+                            <Grid Background="Yellow" />
+                        </dock:Document>
+                    </dock:DocumentGroup>
+                </dock:LayoutPanel>
+            </dock:LayoutPanel>
+        </dock:DockManager>
+    </Grid>
+</Window>

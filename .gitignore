@@ -1,0 +1,17 @@
+## Build results
+[Bb]in/
+[Oo]bj/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+
+## Backup & temp files
+*.tmp
+*.bak
+*.ncb
+*.log
+*.vspscc
